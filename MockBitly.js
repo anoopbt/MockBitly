@@ -115,8 +115,8 @@ app.post('/createShortUrl', function (req, res) {
 
 });
 
-var birds = require('./birds')
-app.use('/birds', birds)
+/*var birds = require('./birds')
+app.use('/birds', birds)*/
 
 app.all('*', function (req, res) {
     res.redirect('/error');
