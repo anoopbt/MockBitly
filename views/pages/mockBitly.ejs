@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+
+        <main>
+            <div class="jumbotron">
+                <h1>Short URL</h1>
+                <p>Create a Short URL</p>
+
+                <br>
+
+                <form id="createShortUrlForm" name="createShortUrlForm" action="/createShortUrl/" method="post" >
+                    Original URL: <input name="longUrl" type="text" value="<%=originalUrl%>"/> 
+                    <br>
+                    <p style="padding-left: 10em;"></p> &nbsp; <input type="submit" name="submit" value="Submit"/>
+                </form>
+
+                <br>
+                <%
+                if('' !== shortUrl)
+                {
+                %>
+
+                <%=shortUrl%>
+
+                <%
+                }
+                %>
+            </div>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+
+    </body>
+</html>
