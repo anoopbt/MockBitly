@@ -115,8 +115,8 @@ app.post('/createShortUrl', function (req, res) {
 
 });
 
-/*var birds = require('./birds')
-app.use('/birds', birds)*/
+var birds = require('./birds')
+app.use('/birds', birds)
 
 app.all('*', function (req, res) {
     res.redirect('/error');
@@ -125,5 +125,3 @@ app.all('*', function (req, res) {
 var server = app.listen(5000, function () {
     console.log('Mock bitly is running..');
 });
-
-// anoop
